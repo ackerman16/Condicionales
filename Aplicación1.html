@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado agua</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color:lavender;
+            color:blueviolet;
+            font-size: 22px;
+        }
+        #boton{
+            width: 212px;
+            height:50px;
+            font-size: 25px;
+        }
+        .gas{
+            color:lightslategray
+        }
+        .liquido{
+            color:dodgerblue
+        }
+        .hielo{
+            color:blue
+        }
+        #temperatura{
+            width: 205px;
+            height:50px;
+            font-size: 25px;
+        }
+        #respuesta{
+            font-size: 45px;
+        }
+        
+    </style>
+    <script>
+        function verTemperatura(){
+
+        var temperatura = document.getElementById("temperatura").value;
+   
+      if(temperatura >100){
+        //alert("El agua estará en estado gaseoso");
+        document.getElementById("respuesta").innerHTML = "<span class='gas'>GASEOSO</span";
+        }else if(temperatura >0){
+        document.getElementById("respuesta").innerHTML = "<span class='liquido'>LIQUIDO</span";
+        }else if(temperatura <0){
+        document.getElementById("respuesta").innerHTML = "<span class='hielo'>SOLIDO</span";
+       }
+   }
+    
+   </script>
+
+    <h1>Temperatura del agua:</h1><input type="text" id="temperatura"><br>
+
+    <input type="button" value="Estado" onclick="verTemperatura()" id="boton"><br>
+    <div id="respuesta"></div>
+</body>
+</html>
