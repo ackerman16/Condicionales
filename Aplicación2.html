@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+            background-color:lightgoldenrodyellow;
+            color:black
+            font-size: 22px;
+        }
+        #boton{
+            width: 212px;
+            height:50px;
+            font-size: 25px;
+        }
+        .benjamin{
+            color:black;
+        }
+        .alevin{
+            color:black;
+        }
+        .infantil{
+            color:black;
+        }
+        .cadete{
+            color:black;
+        }
+        #edad{
+            width: 205px;
+            height:50px;
+            font-size: 25px;
+        }
+        #categoria{
+            font-size: 45px;
+        }
+
+</style>
+<body>
+    <script>
+    function verCategoria(){
+
+        var edad = document.getElementById("edad").value;
+
+        if (edad <=7){    
+            document.getElementById("categoria").innerHTML = "<span class='benjamin'>Benjamín</span";
+        }else if(edad <=9){
+            document.getElementById("categoria").innerHTML = "<span class='alevin'>Alevín</span";
+        }else if(edad <=11){
+            document.getElementById("categoria").innerHTML = "<span class='infantil'>Infantil</span";
+        }else if(edad >13){
+            document.getElementById("categoria").innerHTML = "<span class='cadete'>Cadete</span";
+        }
+    }
+        
+
+    
+    </script>
+    
+    <h1>Edad:</h1> <input type="text" id="edad"><br>
+   
+    <input type="button" value="Categoría" onclick="verCategoria()" id="boton"><br> 
+    <div id="categoria"></div>
+</body>
+</html>
