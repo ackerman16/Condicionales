@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:lightcyan
+    }
+    #boton{
+        width: 212px;
+        height:50px;
+        font-size: 25px;
+    }
+</style>
+
+<script>
+    function QuienMayor(){
+        
+        var edad = document.getElementById("edad").value;
+        var edadamigo = document.getElementById("edadamigo").value;
+
+
+        if(edad > edadamigo){
+            document.getElementById("salida").innerHTML = "<h2 class='edad'>Tú eres mayor que tú amigo</h2"
+        }else if(edad < edadamigo){
+            document.getElementById("salida").innerHTML = "<h2 class='edadamigo'>Tu amigo es mayor que tú</h2"
+        }else if(edad = edadamigo){
+            document.getElementById("salida").innerHTML = "<h2 class='edades'>Teneis la misma edad</h2"
+             }
+    
+    }
+</script>
+<body>
+    <h2>Tu edad:</h2><input type="text" id="edad"><br>
+    <h2>La edad de tu amigo:</h2><input type="text" id="edadamigo"><br>
+    <input type="button" value="¿Quién es mayor?" onclick="QuienMayor()" id="boton"><br>
+    <div id="salida"></div>
+</body>
+</html>
